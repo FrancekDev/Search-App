@@ -1,8 +1,8 @@
-export const renderItems = (lectures, fallbackMessage = "No result") => {
-  const girdEl = document.querySelector(".grid");
+export const renderItems = (lectures, fallbackMessage) => {
+  const gridEl = document.querySelector(".grid");
   const alertEl = document.querySelector(".alert");
 
-  girdEl.innerHTML = "";
+  gridEl.innerHTML = "";
 
   if (lectures.length) {
     alertEl.classList.remove("alert_visible");
@@ -19,7 +19,7 @@ export const renderItems = (lectures, fallbackMessage = "No result") => {
       cardLengthEl.className = "card__time";
       cardLengthEl.innerText = `${lecture.lectureLength} min`;
 
-      girdEl.appendChild(cardEl);
+      gridEl.appendChild(cardEl);
 
       cardEl.appendChild(cardTitleEl);
       cardEl.appendChild(cardLengthEl);
@@ -29,5 +29,5 @@ export const renderItems = (lectures, fallbackMessage = "No result") => {
     alertEl.innerText = fallbackMessage;
   }
 
-  console.log(girdEl.innerHTML);
+  console.log(gridEl.innerHTML);
 };

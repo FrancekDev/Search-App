@@ -26,19 +26,20 @@ body {
 .section__title {
   color: rgb(110, 110, 199);
   text-align: center;
+  font-size: 32px;
   margin: 20px;
 }
 
 .search {
   margin-bottom: 32px;
   border-radius: 12px;
-  border: 1px solid rgb(110, 110, 199);
+  border: 2px solid rgb(110, 110, 199);
   line-height: 32px;
   width: 400px;
 }
 
 .search:focus {
-  outline: 5px rgb(110, 110, 199);
+  outline: 1px solid rgb(110, 110, 199);
 }
 
 .alert {
@@ -66,11 +67,15 @@ body {
 }
 
 .card {
+  position: relative;
   text-align: center;
   padding: 18px;
-  border: 1px solid rgb(110, 110, 199);
+  background-color: rgba(209, 205, 201, 0.668);
+  border: 2px solid rgb(110, 110, 199);
   border-radius: 8px;
-  box-shadow: 0px 0px 8px 1px rgba(143, 143, 143, 0.6);
+  box-shadow: 4px 4px 8px 1px rgba(143, 143, 143, 0.6);
+  width: 200px;
+  height: 150px;
 }
 
 .card__title {
@@ -79,8 +84,9 @@ body {
 }
 
 .card__time {
-  display: flex;
-  justify-content: end;
-  align-items: end;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
   font-size: 12px;
+  color: rgb(111, 111, 111);
 }
