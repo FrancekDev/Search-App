@@ -1,23 +1,22 @@
+// Imports
 import { lectures } from "./data.js";
-
-console.log(lectures.lectureName);
-
+import { renderItems } from "./modules/lectureRender.js";
+// Variables
 const inputSearchEl = document.querySelector(".search");
 
-const lectures = new Lectures(lectures);
+// Functions that are executed on body load
+renderItems(lectures);
 
-class player {
-  constructor(lectureName, lectureLength) {
-    this.title = lectureName;
-    this.length = lectureLength;
-  }
-  getLectureDetails() {
-    return `${this.title} ${this.length}`;
-  }
-}
+// Event listeners
+inputSearchEl.addEventListener("keyup", (event) => {
+  const searchTerm = event.target.value;
 
-console.log("player");
+  const filteredResults = lectures.filter((lecture) =>
+    lecture.lectureName.toLowerCase().includes(searchTerm.toLowerCase())
+  );
 
-const search = function () {
-  let filter = inputSearchEl.ariaValueMax.toUpperCase();
-};
+  renderItems(
+    filteredResults,
+    "There are no lessons according to the entered term"
+  );
+});

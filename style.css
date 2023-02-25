@@ -19,6 +19,8 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin: auto;
+  width: 80%;
 }
 
 .section__title {
@@ -28,7 +30,32 @@ body {
 }
 
 .search {
-  line-height: 24px;
+  margin-bottom: 32px;
+  border-radius: 12px;
+  border: 1px solid rgb(110, 110, 199);
+  line-height: 32px;
+  width: 400px;
+}
+
+.search:focus {
+  outline: 5px rgb(110, 110, 199);
+}
+
+.alert {
+  display: none;
+  padding: 12px;
+  font-size: 16px;
+  text-align: center;
+  line-height: 150%;
+  border-radius: 6px;
+  background-color: rgba(235, 87, 87, 0.2);
+  color: #eb5757;
+  max-width: 550px;
+  margin: 0 auto;
+}
+
+.alert.alert_visible {
+  display: block;
 }
 
 .grid {
@@ -38,20 +65,22 @@ body {
   margin-top: 64px;
 }
 
-.grid__card {
+.card {
   text-align: center;
-  padding: 12px;
+  padding: 18px;
   border: 1px solid rgb(110, 110, 199);
   border-radius: 8px;
   box-shadow: 0px 0px 8px 1px rgba(143, 143, 143, 0.6);
 }
 
-.grid__title {
+.card__title {
   color: rgb(110, 110, 199);
-  margin-bottom: 12px;
+  margin-bottom: 32px;
 }
 
-.grid__time {
+.card__time {
+  display: flex;
+  justify-content: end;
+  align-items: end;
   font-size: 12px;
-  text-align: right;
 }
